@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.google.com/specimen/Comfortaa?query=comfortaa#standard-styles" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Agrotools</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        function entrar(form) {
+            if (form.usuario.value == "admin" && form.senha.value == "1234") {
+                location = "agricultor/lista.html"
+            }
+
+            else {
+                form.usuario.value = ""
+                form.senha.value = ""
+                alert("Dados invalido")
+            }
+        }
+    </script>
+
+    <div class="login">
+        <img src="62381459_2543377719079555_4082223336602468352_n.png" class="usuario" width="100" height="100" alt="">
+        <h1>Login</h1>
+
+        <form name="form">
+
+            <p>Usuario</p>
+            <input type="text" name="usuario" placeholder="Insira seu nome" autocomplete="off">
+
+            <p>Senha</p>
+            <input type="password" name="senha" placeholder="Insira sua senha" autocomplete="off">
+            <br><br>
+
+            <input type="button" value="Login" onclick="entrar(this.form)">
+            <br><br>
+
+            <a href="#">Esqueceu sua senha?</a><br>
+            <a href="#">Ainda não possui uma conta?</a>
+        </form>
+
+    </div>
+</body>
+
+</html>
